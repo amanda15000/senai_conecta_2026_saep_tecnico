@@ -1,6 +1,10 @@
 RewriteEngine On
 
+# repassa o token (Authorization) para o PHP
+RewriteCond %{HTTP:Authorization} ^(.*)
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%1]
+
+# manda as rotas para o index.php (arquivos e pastas existentes passam direto)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-
 RewriteRule ^(.*)$ index.php [QSA,L]

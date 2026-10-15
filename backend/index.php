@@ -152,7 +152,7 @@ if ($uri === '/cadastro' && $method === 'POST') {
         responder(["erro" => "Nome de usuário ou e-mail já cadastrados."], 409);
     }
 
-    $foto = salvarImagem('foto') ?? "default_avatar.png";
+    $foto = salvarImagem('foto') ?? "avatar.png";
 
     // quem se cadastra pelo sistema entra como 'usuario' (só curte)
     $stmt = $db->prepare("INSERT INTO usuario (nome, username, email, senha, foto, tipo_perfil) VALUES (?, ?, ?, ?, ?, 'usuario')");
