@@ -1,0 +1,7 @@
+id_usuario,nome,username,email,senha,foto,tipo_perfil,criado_em,atualizado_em
+1,criador1,criador_1,criador1@gmail.com,123456,criador1.jpg,criador,2024-04-20 12:40:08,2026-03-25 12:40:08
+2,criador2,criador_2,criador2@gmail.com,123456,criador2.jpg,criador,2024-05-23 12:42:56,2026-03-25 12:42:56
+3,criador3,criador_3,criador3@gmail.com,123456,criador3.jpg,criador,2024-06-27 12:45:44,2026-03-25 12:45:44
+4,usuario1,usuario_1,usuario1@gmail.com,123456,usuario1.jpg,usuario,2024-07-15 12:48:32,2026-03-25 12:48:32
+5,usuario2,usuario_2,usuario2@gmail.com,123456,usuario2.jpg,usuario,2024-08-13 12:51:20,2026-03-25 12:51:20
+6,usuario3,usuario_3,usuario3@gmail.com,123456,usuario3.jpg,usuario,2024-09-12 12:54:08,2026-03-25 12:54:08

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SENAI Conecta</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">SENAI CONECTA</div>
+        <div class="search-box">
+            <input type="text" id="searchInput" placeholder="Digite o nome do usuário...">
+        </div>
+        <div class="user-menu" id="userMenu">
+            <!-- Renderizado via JS conforme estado de autenticação -->
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="createPostSection" class="card hidden">
+            <h3 class="section-title">Criar Publicação</h3>
+            <form id="postForm" class="composer">
+                <textarea id="postText" placeholder="O que você está pensando?"></textarea>
+                <div class="composer-actions">
+                    <input type="file" id="postImage" accept="image/*">
+                    <button type="submit" class="btn primary">Publicar</button>
+                </div>
+            </form>
+        </section>
+
+        <h2 class="section-title">Publicações</h2>
+        <section id="feed" class="feed-container">
+            <!-- Feed renderizado dinamicamente -->
+        </section>
+    </main>
+
+    <!-- Modal de Autenticação -->
+    <div id="authModal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeAuthModal()">&times;</span>
+            <div class="tabs">
+                <button id="tabLogin" class="tab-btn active" onclick="switchTab('login')">Login</button>
+                <button id="tabRegister" class="tab-btn" onclick="switchTab('register')">Cadastrar</button>
+            </div>
+
+            <form id="loginForm" class="auth-form">
+                <label for="loginEmail">E-mail</label>
+                <input type="email" id="loginEmail" required>
+                <label for="loginSenha">Senha</label>
+                <input type="password" id="loginSenha" required>
+                <div id="loginError" class="error-msg hidden"></div>
+                <div class="modal-actions">
+                    <button type="button" class="btn secondary" onclick="closeAuthModal()">Cancelar</button>
+                    <button type="submit" class="btn primary">Entrar</button>
+                </div>
+            </form>
+
+            <form id="registerForm" class="auth-form hidden">
+                <label for="regNome">Nome</label>
+                <input type="text" id="regNome" required>
+                <label for="regUsername">Username</label>
+                <input type="text" id="regUsername" required>
+                <label for="regEmail">E-mail</label>
+                <input type="email" id="regEmail" required>
+                <label for="regSenha">Senha</label>
+                <input type="password" id="regSenha" required>
+                <label for="regFoto">Foto de perfil</label>
+                <input type="file" id="regFoto" accept="image/*">
+                <div id="regError" class="error-msg hidden"></div>
+                <div class="modal-actions">
+                    <button type="button" class="btn secondary" onclick="closeAuthModal()">Cancelar</button>
+                    <button type="submit" class="btn primary">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <strong>SENAI Conecta</strong>
+        <p>&copy; 2026-2027 SENAI Conecta</p>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
